@@ -111,7 +111,7 @@ run(C, Env1, Env3) :- step(C, Env1, C2, Env2), run(C2, Env2, Env3).
 minimum(X, Y, Z) :-
   run(
     if(less(var(x), var(y)), let(z, var(x)), let(z, var(y))),
-    [[x,X], [y,Y], [z,42]],
+    [assign(x,X), assign(y,Y), assign(z,42)],
     Env),
   get(z, Env, Z).
 
