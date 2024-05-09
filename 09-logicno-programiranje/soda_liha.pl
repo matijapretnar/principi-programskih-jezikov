@@ -1,4 +1,4 @@
-even(succ(X)) :-
+even(zero).
 even(succ(X)) :-
     odd(X).
 odd(succ(X)) :-

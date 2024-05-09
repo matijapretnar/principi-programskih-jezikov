@@ -100,7 +100,7 @@ step(while(B, _), Env, skip, Env) :-
 /* run(C, Env1, Env2) velja, če ukaz C v okolju Env1 po končno mnogo korakih
    konča v okolju Env2 */
 run(skip, Env, Env).
-run(C, Env1, Env3) :- step(C, Env1, C2, Env2), run(C2, Env2, Env3).
+run(C1, Env1, Env3) :- step(C1, Env1, C2, Env2), run(C2, Env2, Env3).
 
 /* Primeri */
 
